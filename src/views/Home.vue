@@ -1,11 +1,26 @@
 <template>
-  <main>
-    <div class="px-4 py-6 sm:px-0">
-      <div
-        class="border-4 border-dashed border-gray-200 rounded-lg h-96 p-4 text-center text-gray-400"
-      >
-        Here goes your content. You can also go the About page.
-      </div>
-    </div>
-  </main>
+  <div class="bg-white overflow-hidden">
+    <Item
+      v-for="item in items"
+      :key="item.name"
+      :item="item"
+    />
+  </div>
 </template>
+<script>
+import Item from '../components/Item.vue'
+
+export default {
+  components: { Item },
+  data () {
+    return {
+      items: []
+    }
+  },
+  async mounted () {
+    const response = await fetch('https://sheetapi.co/apis/ryZPQXbYGAtJA1C3yCsfAf/raw')
+    const data = await response.json()
+    this.items = data.filter(item => item.available === 'YES')
+  }
+}
+</script>
