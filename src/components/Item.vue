@@ -22,7 +22,7 @@
             <img
               v-for="image of images"
               :key="image"
-              class="object-cover object-center mr-2" 
+              class="object-contain object-center mr-2" 
               :src="`/img/${image}`" 
               :alt="item.name"
             />

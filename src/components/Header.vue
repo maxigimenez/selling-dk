@@ -1,4 +1,3 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="bg-gray-800">
     <div class="max-w-7xl mx-auto px-6 py-10 sm:px-6 lg:px-0">
@@ -37,5 +36,6 @@ import {
   PhoneIcon,
 } from '@heroicons/vue/solid'
 import { ref }from '@vue/reactivity'
+
 const phoneVisible = ref(false)
 </script>

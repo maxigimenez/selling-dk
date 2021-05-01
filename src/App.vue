@@ -2,11 +2,6 @@
   <Home />
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
 import Home from './views/Home.vue'
-
-export default defineComponent({
-  components: { Home }
-})
 </script>
