@@ -19,30 +19,23 @@
           </div>
         </div>
         <div class="mt-5 flex lg:mt-0 lg:ml-4">
-          <span class="hidden sm:block">
-            <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
-              <PhoneIcon class="-ml-1 mr-2 h-5 w-5 text-gray-300" aria-hidden="true" />
-              Contact
-            </button>
-          </span>
+          <button @click="phoneVisible = !phoneVisible" type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
+            <PhoneIcon class="-ml-1 mr-2 h-5 w-5 text-gray-300" aria-hidden="true" />
+            Contact
+            <span v-show="phoneVisible" class="ml-2">+45 50 25 53 47</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import {
   CalendarIcon,
   LocationMarkerIcon,
   PhoneIcon,
 } from '@heroicons/vue/solid'
-
-export default {
-  components: {
-    CalendarIcon,
-    LocationMarkerIcon,
-    PhoneIcon,
-  },
-}
+import { ref }from '@vue/reactivity'
+const phoneVisible = ref(false)
 </script>

@@ -1,11 +1,13 @@
 <template>
   <div class="bg-white overflow-hidden">
     <Header />
-    <Item
-      v-for="item in items"
-      :key="item.name"
-      :item="item"
-    />
+    <div class="pb-10">
+      <Item
+        v-for="item in items"
+        :key="item.name"
+        :item="item"
+      />
+    </div>
   </div>
 </template>
 <script>
