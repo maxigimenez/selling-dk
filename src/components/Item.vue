@@ -14,7 +14,7 @@
     <div class="mt-8">
       <div class="text-base mx-auto max-w-prose lg:max-w-none">
         <figure class="overflow-x-auto w-full">
-          <div class="aspect-w-12 aspect-h-7 lg:aspect-none flex" style="max-width: 500px">
+          <div class="aspect-w-12 aspect-h-7 lg:aspect-none flex previews">
             <img
               v-for="image of images"
               :key="image"
@@ -51,3 +51,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.previews {
+  max-width: 500px;
+}
+
+@media (max-width: 600px)  {
+  .previews {
+    max-width: 250px;
+  }
+}
+</style>
