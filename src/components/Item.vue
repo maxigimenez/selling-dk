@@ -18,7 +18,7 @@
     <div class="mt-8">
       <div class="text-base mx-auto max-w-prose lg:max-w-none">
         <figure class="overflow-x-auto w-full">
-          <div class="aspect-w-12 aspect-h-7 lg:aspect-none flex previews">
+          <div class="aspect-none flex previews">
             <img
               v-for="image of images"
               :key="image"
@@ -64,7 +64,8 @@ export default {
 
 @media (max-width: 600px)  {
   .previews {
-    max-width: 250px;
+    max-width: 100%;
+    max-height: 300px;
   }
 }
 </style>
