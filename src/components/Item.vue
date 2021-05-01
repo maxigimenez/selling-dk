@@ -6,6 +6,10 @@
           <CurrencyDollarIcon class="w-5 h-5 text-indgo-600 mr-1" />
           {{ item.price }}
         </h2>
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide flex items-center">
+          <CalendarIcon class="w-5 h-5 text-indgo-600 mr-1" />
+          Available: {{ item.pickup }}
+        </h2>
         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           {{ item.name }}
         </h3>
@@ -35,11 +39,12 @@
 </template>
 
 <script>
-import { CurrencyDollarIcon } from '@heroicons/vue/solid'
+import { CurrencyDollarIcon, CalendarIcon } from '@heroicons/vue/solid'
 
 export default {
   components: {
-    CurrencyDollarIcon
+    CurrencyDollarIcon,
+    CalendarIcon
   },
   props: {
     item: Object
