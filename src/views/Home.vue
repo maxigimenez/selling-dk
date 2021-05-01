@@ -1,5 +1,6 @@
 <template>
   <div class="bg-white overflow-hidden">
+    <Header />
     <Item
       v-for="item in items"
       :key="item.name"
@@ -8,10 +9,11 @@
   </div>
 </template>
 <script>
+import Header from '../components/Header.vue'
 import Item from '../components/Item.vue'
 
 export default {
-  components: { Item },
+  components: { Header, Item },
   data () {
     return {
       items: []
