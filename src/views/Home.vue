@@ -26,7 +26,7 @@ export default {
     }
   },
   async mounted () {
-    const response = await fetch('https://sheetapi.co/apis/ryZPQXbYGAtJA1C3yCsfAf/raw')
+    const response = await fetch('https://sheetapi.co/apis/ryZPQXbYGAtJA1C3yCsfAf/raw?limit=50')
     const data = await response.json()
     this.items = data.filter(item => item.available === 'YES')
     this.isLoading = false
